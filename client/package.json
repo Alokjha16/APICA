@@ -22,6 +22,7 @@
     "react-router-dom": "^7.13.0",
     "react-spinners": "^0.17.0",
     "react-toastify": "^11.0.5",
+    "react-world-flags": "^1.6.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
