@@ -5,6 +5,8 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import bankAnalyticsRoutes from "./routes/bankAnalytics.routes.js";
 import productRoutes from "./routes/product.routes.js";
+import customerRecommendationRoutes from "./routes/customerRecommendation.routes.js";
+import aiRoutes from "./routes/ai.routes.js";
 
 dotenv.config();
 
@@ -23,6 +25,8 @@ app.get("/", (req, res) => {
 // Register route
 app.use("/api/bank-analytics", bankAnalyticsRoutes);
 app.use("/api/products", productRoutes);
+app.use("/api/customer-recommendations", customerRecommendationRoutes);
+app.use("/api/ai-insights", aiRoutes);
 
 const PORT = process.env.PORT || 5000;
 

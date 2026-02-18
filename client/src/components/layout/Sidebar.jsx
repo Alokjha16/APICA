@@ -5,8 +5,8 @@ import {
   Users,
   Package,
   Brain,
-  Megaphone,
-  ShieldCheck,
+  Phone,
+  Power,
   Settings,
 } from "lucide-react";
 
@@ -25,11 +25,10 @@ const Sidebar = () => {
   const menuItems = [
     { name: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
     { name: "Customers", icon: Users, path: "/dashboard/customers" },
-    { name: "Products", icon: Package, path: "/dashboard/products" },
-    { name: "AI Engine", icon: Brain, path: "/dashboard/ai-engine" },
-    { name: "Campaigns", icon: Megaphone, path: "/dashboard/campaigns" },
-    { name: "Compliance", icon: ShieldCheck, path: "/dashboard/compliance" },
+      { name: "AI Engine", icon: Brain, path: "/dashboard/ai-engine" },
     { name: "Settings", icon: Settings, path: "/dashboard/settings" },
+      { name: "Contact us ", icon: Phone, path: "/contactus" },
+      { name: "Log Out ", icon: Power, path: "/" }
   ];
 
   return (
