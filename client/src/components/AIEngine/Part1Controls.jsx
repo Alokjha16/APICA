@@ -51,15 +51,16 @@ const Part1Controls = () => {
   };
 
   return (
-    <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
       {/* --- Existing Recommendation Engine Controls --- */}
-      <section className="bg-white shadow-lg rounded-xl p-6 mb-6 border border-gray-100">
+      <section className="bg-white shadow-lg rounded-xl p-4 sm:p-6 mb-6 border border-gray-100">
         <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
           <Info size={20} className="text-indigo-500" />
           Recommendation Engine Controls
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Grid: 1 column on mobile, 2 on md, 4 on lg */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Send Mode */}
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
@@ -69,7 +70,7 @@ const Part1Controls = () => {
             <select
               value={sendMode}
               onChange={handleSendModeChange}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
             >
               <option value="Email">📧 Email</option>
               <option value="SMS">📱 SMS</option>
@@ -84,7 +85,7 @@ const Part1Controls = () => {
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
               <span className="text-indigo-500 font-bold">%</span>
-              Confidence Score (%)
+              Confidence Score 
             </label>
             <input
               type="number"
@@ -92,10 +93,10 @@ const Part1Controls = () => {
               max={100}
               value={confidenceThreshold}
               onChange={handleConfidenceChange}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
             />
             <p className="text-xs text-gray-500">
-              Only include recommendations above this score.
+              Take recommendations above this score.
             </p>
           </div>
 
@@ -103,14 +104,14 @@ const Part1Controls = () => {
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
               <span className="text-indigo-500 font-bold">#</span>
-              Max Recommendations
+             Limit upto
             </label>
             <input
               type="number"
               min={1}
               value={maxRecommendations}
               onChange={handleMaxRecommendationsChange}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
             />
             <p className="text-xs text-gray-500">
               Limit the number sent per batch.
@@ -152,9 +153,9 @@ const Part1Controls = () => {
       </section>
 
       {/* --- Enhanced Two Cards: Cross-Sell Product + RBI / AI Recommendations --- */}
-      <section className="grid md:grid-cols-2 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Card 1: Add Cross-Sell Product with Professional Flair */}
-        <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100">
+        <div className="bg-white shadow-lg rounded-xl p-4 sm:p-6 border border-gray-100">
           <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
             <PlusCircle size={20} className="text-indigo-500" />
             Add New Cross-Sell Product
@@ -170,7 +171,7 @@ const Part1Controls = () => {
                 value={product.type}
                 onChange={handleProductChange}
                 placeholder="e.g., Savings Account, Personal Loan"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
               />
             </div>
             <div>
@@ -183,7 +184,7 @@ const Part1Controls = () => {
                 value={product.name}
                 onChange={handleProductChange}
                 placeholder="e.g., Premium Savings, Quick Loan"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
               />
             </div>
             <div>
@@ -195,7 +196,7 @@ const Part1Controls = () => {
                 value={product.prompt}
                 onChange={handleProductChange}
                 placeholder="Describe when to recommend this product (e.g., 'Suggest to customers with high monthly deposits')"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
                 rows={3}
               />
             </div>
@@ -205,7 +206,6 @@ const Part1Controls = () => {
               <span className="text-xs font-medium text-gray-500 mr-1 self-center">
                 Templates:
               </span>
-              
               <button
                 type="button"
                 onClick={() =>
@@ -236,7 +236,7 @@ const Part1Controls = () => {
 
             <button
               type="button"
-              className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition flex items-center justify-center gap-2 font-medium"
+              className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition flex items-center justify-center gap-2 font-medium text-sm"
             >
               <Sparkles size={18} />
               Preview / Suggest
@@ -263,11 +263,11 @@ const Part1Controls = () => {
         </div>
 
         {/* Card 2: RBI Compliance & AI Recommendations (with pre‑2.3 content) */}
-        <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100 flex flex-col">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+        <div className="bg-white shadow-lg rounded-xl p-4 sm:p-6 border border-gray-100 flex flex-col">
+          <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2 flex-wrap">
             <Shield size={20} className="text-indigo-500" />
-            Edit RBI Compliance & <br /> AI-Recommendations
-            <span className="ml-auto text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">
+            Edit RBI Compliance & AI‑Recommendations
+            <span className="ml-auto text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full whitespace-nowrap">
               v2.3
             </span>
           </h2>
@@ -287,18 +287,19 @@ const Part1Controls = () => {
             </ul>
           </div>
 
-          <div className="flex gap-2">
+          {/* Input + Add button: stack on mobile, row on larger screens */}
+          <div className="flex flex-col sm:flex-row gap-2">
             <input
               type="text"
               value={newRec}
               onChange={(e) => setNewRec(e.target.value)}
               placeholder="(e.g., RBI: new rule, AI: insight)"
-              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
             />
             <button
               type="button"
               onClick={handleAddRecommendation}
-              className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition flex items-center gap-1"
+              className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition flex items-center justify-center gap-1 text-sm"
             >
               <PlusCircle size={18} />
               Add
@@ -309,7 +310,7 @@ const Part1Controls = () => {
           </p>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
