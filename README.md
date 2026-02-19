@@ -158,7 +158,7 @@ Because the future of banking is:
 - **Personalized** – Offers that feel made for each individual.
 - **Explainable** – No black boxes, only clear reasoning.
 - **Responsible** – Built with ethics and compliance from day one.
-- **Scalable** – Ready for multi‑bank, multi‑channel growth..
+- **Scalable** – Ready for multi‑bank, multi‑channel growth...
 
 ---
 
