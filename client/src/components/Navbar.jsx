@@ -16,9 +16,14 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-6">
-          <a href="#how-it-works" className="text-gray-700 hover:text-blue-600">
+          {/* Updated to use 'Link' and 'to' */}
+          <Link
+            to="/subscription"
+            className="text-gray-700 hover:text-blue-600"
+          >
             Subscription Plans
-          </a>
+          </Link>
+
           <a href="#features" className="text-gray-700 hover:text-blue-600">
             Features
           </a>
@@ -26,8 +31,8 @@ const Navbar = () => {
 
         {/* Custom Admin User Button */}
         <div className="flex items-center space-x-4">
-          <Link 
-            to="/admin" 
+          <Link
+            to="/admin"
             className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-sm"
             title="Go to Admin Page"
           >

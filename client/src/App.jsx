@@ -9,6 +9,7 @@ import CustomersPage from "./pages/CustomersPage";
 import AIEnginePage from "./pages/AIEnginePage";
 import ContactPage from "./pages/ContactPage";
 import SettingsPage from "./pages/SettingsPage";
+import Subscription from "./pages/Subscription";
 
 const App = () => {
   return (
@@ -22,12 +23,14 @@ const App = () => {
         <Route path="customers" element={<CustomersPage />} />
 
         <Route path="ai-engine" element={<AIEnginePage />} />
-        <Route path="contactus" element={<ContactPage/>} />
+        <Route path="contactus" element={<ContactPage />} />
 
         <Route path="settings" element={<SettingsPage />} />
+
         {/* Catches broken links INSIDE dashboard (e.g. /dashboard/test) */}
         <Route path="*" element={<NotFound />} />
       </Route>
+      <Route path="/subscription" element={<Subscription />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
