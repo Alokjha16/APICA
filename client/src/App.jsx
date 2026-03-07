@@ -10,7 +10,7 @@ import AIEnginePage from "./pages/AIEnginePage";
 import ContactPage from "./pages/ContactPage";
 import SettingsPage from "./pages/SettingsPage";
 import Subscription from "./pages/Subscription";
-import UserAnalyze from "./pages/userAnalyze";
+import UserAnalyze from "./pages/UserAnalyze";
 import SMSPage from "./pages/SMSPage";
 import Payment from "./pages/payment";
 
