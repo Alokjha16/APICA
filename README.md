@@ -1,5 +1,5 @@
 
-# APICA – AI Powered Intelligent Cross-Sell Agent./🤖
+# APICA – AI Powered Intelligent Cross-Sell Agent.//🤖
 
 > **Smarter Banking. Personalized by AI.**  
 > APICA is an AI-driven intelligent cross-sell recommendation system that helps banks deliver personalized, timely, and compliant financial product offers to customers, boosting engagement and conversion.
