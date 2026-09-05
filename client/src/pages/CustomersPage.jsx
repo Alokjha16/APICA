@@ -1,4 +1,4 @@
-// client/src/pages/CustomersPage.jsx/./.
+// client/src/pages/CustomersPage.jsx/./..
 import { useState, useEffect } from "react";
 import { UserPlus, X, Send, Info, Mail, Phone, Smartphone, Globe } from "lucide-react";
 import { Link } from 'react-router-dom';
