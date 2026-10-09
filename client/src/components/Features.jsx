@@ -1,4 +1,4 @@
-;l;kkln'j.kjjljlknnlk.lnkjimport React from "react";
+import React from "react";
 import { featuresData } from "../assets/featuresData";
 import {
   LayoutDashboard,
