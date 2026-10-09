@@ -1,4 +1,4 @@
-lkjimport User from "../models/user.model.js";
+import User from "../models/user.model.js";
 
 // CREATE USER
 export const createUser = async (req, res) => {
