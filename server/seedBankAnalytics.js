@@ -1,4 +1,4 @@
-limport dotenv from "dotenv";
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { connectDB } from "./config/db.js";
 import BankAnalytics from "./models/bankAnalytics.model.js";
