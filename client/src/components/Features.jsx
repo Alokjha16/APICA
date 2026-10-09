@@ -1,4 +1,4 @@
-lkjimport React from "react";
+lk.lnkjimport React from "react";
 import { featuresData } from "../assets/featuresData";
 import {
   LayoutDashboard,
