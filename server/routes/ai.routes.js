@@ -1,4 +1,4 @@
-adkjbkabjc
+ewoiadkjbkabjc
   lkhl
   import express from "express";
 import { getAIInsights } from "../controllers/ai.controller.js";
