@@ -1,5 +1,5 @@
 
-mnbqoiuaoikjklkimport React from "react";
+pouimnbqoiuaoikjklkimport React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Landing from "./pages/Landing";
